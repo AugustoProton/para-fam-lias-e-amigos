@@ -119,7 +119,7 @@ body {
 }
 
 /* Ajustes para smartphones */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .envelope {
         padding: 15px;
     }

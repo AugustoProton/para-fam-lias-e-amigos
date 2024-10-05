@@ -1,0 +1,140 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #b3e5fc, #e1f5fe); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* Envelope */
+.envelope {
+    width: 100%;
+    max-width: 400px; /* Limite máximo de tamanho */
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.flap {
+    width: 100%;
+    background-color: #d4d4d4;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.emblem {
+    width: 80px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.envelope-content {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.envelope-content.show {
+    display: block;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.heart-beat img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Bolinhas */
+.bubble {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: fall 3s linear forwards, flash 3s infinite;
+}
+
+/* Animação de bolinhas caindo */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Efeito de piscar */
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Ajustes para smartphones */
+@media (max-width: 600px) {
+    .envelope {
+        padding: 15px;
+    }
+
+    .emblem {
+        width: 70px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .heart-beat img {
+        width: 100%;
+    }
+
+    .close-btn {
+        padding: 8px 16px;
+    }
+}

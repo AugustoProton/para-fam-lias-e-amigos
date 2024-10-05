@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Casa Nova - Augusto & Andréia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Envelope principal -->
+    <div class="envelope">
+        <!-- Aba do envelope -->
+        <div class="flap">
+            <button class="emblem" onclick="openEnvelope()">Abrir</button>
+        </div>
+
+        <!-- Conteúdo do envelope com imagem e mensagem -->
+        <div class="envelope-content" id="envelopeContent">
+            <div class="message">
+                <h2>Oi família! 🎉</h2>
+                <!-- Imagens lado a lado -->
+                <div class="images-container">
+                    <div class="heart-beat">
+                        <img src="sapatinho_bebe.jpeg" alt="Sapatinho vibrando 1">
+                    </div>
+                    <div class="heart-beat">
+                        <img src="sapatinho_bebe02.jpeg" alt="Sapatinho vibrando 2">
+                    </div>
+                </div>
+                <div id="fireworksContainer"></div> <!-- Fogos de artifício -->
+                <!-- Botão para fechar o envelope -->
+                <button class="close-btn" onclick="closeEnvelope()">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Área para tradução da música -->
+        <div class="song-translation" id="translationContainer" style="display:none;">
+            <p id="translationText"></p>
+        </div>
+
+        <!-- Mensagem para manter atenção dos usuários -->
+        <div id="preMessage" style="display:none; text-align: center; font-size: 24px; color: #333;">
+            <p>Assista até o final!</p>
+        </div>
+    </div>
+
+    <!-- Adicionando o arquivo de áudio -->
+    <audio id="babyMusic" src="Jack Johnson - Upside Down.mp3"></audio>
+
+    <script src="scripts.js"></script> <!-- Link para o arquivo JS -->
+</body>
+</html>
